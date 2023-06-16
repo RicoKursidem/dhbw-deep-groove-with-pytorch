@@ -30,11 +30,11 @@
 	
 		\section{Exploratory Data Analysis} \label{EDA}
 			
-			\noindent Frederik Hardwig describes Exploratory Data Analysis (\ac{EDA}) as two thinks. As a Way of Thinking and a Method to work with data. 
+			\noindent Frederik Hardwig describes \ac{EDA} as two thinks. As a Way of Thinking and a Method to work with data. 
 			The Data Miner should always keep in mind, that you need to look for new Patterns that weren't expected, because they are the most interesting. It is important not trying to proof your own Thesis from before the Analyzing Process but to find new ones and always keep open to new findings. Also the Data Analyst should be skeptic towards Methods that compromise Data. If Data is summarized there will always be some loss of Information and the Hypothesis that will be based on these results will be not complete. To avoid this it is a good thing being skeptic towards compressed data. 
 			As a Method, \ac{EDA} works with a lot of visualization to find patterns in Datasets. It is important not to confuse Data Analysis and Statistics. It is important to keep in mind that even the most used statistical Methods could have some hidden assumptions about the data. It is always suggested to use diagrams and other visual methods to display data to minimize errors resulting out of these assumptions.\cite{Hardwig:Explortory_Data_Analysis}
 			
-			\noindent \ac{EDA} tries to generate a understanding of the data and not to proof already stated Hypothesis. This contrasts the Initial Data Analysis (\ac{IDA}) where it is more common to look closely for findings that are needed to develop a modal and testing hypothesis. The goals of \ac{EDA} is to develop and evaluate Hypothesis, provide recommendations for statistical Techniques to support the analysing process and provide Methods to collect more Data. It tries to find relationships between elements and get the main features of the data. 
+			\noindent \ac{EDA} tries to generate a understanding of the data and not to proof already stated Hypothesis. This contrasts the \ac{IDA} where it is more common to look closely for findings that are needed to develop a modal and testing hypothesis. The goals of \ac{EDA} is to develop and evaluate Hypothesis, provide recommendations for statistical Techniques to support the analysing process and provide Methods to collect more Data. It tries to find relationships between elements and get the main features of the data. 
 			
 			\noindent To achieve these goals it uses different Methods. Descriptive Statistics is used to get a overview of the Data and the structure of the data. It is very important to get a feeling for the data structure to get the most meaningful and efficient results. In \ref{fig:statistical_description} we can see the main statistical characteristics of a dataset, witch contains the top female chess players in the world by the Rating in Standard Chess games. We can see the number of fields, that are filled (count), the median of the value(mean) and the standard deviation(std). It also shows us the Maximum (max) and minimum (min) and the higher, lower and middle quantil (25\%, 75\%, 50\%).
 			
@@ -199,7 +199,7 @@
 				\end{gather}
 				
 				\subsubsection{learning rate}
-					The learning rate is the value that regulates the changes the model does to its weights and biases. In Picture \ref{fig:parameter_study_learning} are two diagrams showing the Accuracy and the average loss of the machine learning model over epochs. It has multiple learning processes shown for different learning rates. It is visible that the larger learning rates are not as smooth as the smaller ones. The Accuracy jumps between high and low values because the model makes too huge changes after every optimization. the smaller the learning rates get, the smoother the graphs get. But if the learning rates gets to small, it can hinder the learning process because the model doesn't modify its weights enough to change its own behavior. In the left of the diagram \ref{fig:parameter_study_learning} the average loss over the epochs is shown. The Model that learned with the larger learning rate does not minimize its loss because it doesn't change its behavior in a significant amount. The lower the learning rate, the better the model minimizes its loss and even if the Accuracy jumps very hard, the average loss is very low and constant.
+					The learning rate is the value that regulates the changes the model does to its weights and biases. In Picture \ref{fig:parameter_study_learning} are two diagrams showing the accuracy and the average loss of the machine learning model over epochs. It has multiple learning processes shown for different learning rates. It is visible that the larger learning rates are not as smooth as the smaller ones. The accuracy jumps between high and low values because the model makes too huge changes after every optimization. the smaller the learning rates get, the smoother the graphs get. But if the learning rates gets to small, it can hinder the learning process because the model doesn't modify its weights enough to change its own behavior. In the left of the diagram \ref{fig:parameter_study_learning} the average loss over the epochs is shown. The model that learned with the larger learning rate does not minimize its loss because it doesn't change its behavior in a significant amount. The lower the learning rate, the better the model minimizes its loss and even if the accuracy jumps very hard, the average loss is very low and constant.
 					
 					\begin{figure} [H]
 						\centering
@@ -212,7 +212,7 @@
 					\end{figure}
 					
 				\subsubsection{batch size}
-					\noindent The size of the batched describes the size of samples the Model gets to train and learn. If the batch size is changed the model refines it learning process to more or less data depending the size. In the Diagram \ref{fig:parameter_study_batch} the model run for six different batch sizes. The accuracy is only good, if the size is not too huge or small. Accuracy with batch size 10 and 100 is not as good as with the sized between. The best result is with 50 where the Accuracy does not jump as much as with 20, 30, or 40. The average Loss is quite similar with all batch sizes. In the right Diagram in picture \ref{fig:parameter_study_batch} the average loss for the different batch sizes are shown. 
+					\noindent The size of the batched describes the size of samples the model gets to train and learn. If the batch size is changed the model refines it learning process to more or less data depending the size. In the Diagram \ref{fig:parameter_study_batch} the model run for six different batch sizes. The accuracy is only good, if the size is not too huge or small. Accuracy with batch size 10 and 100 is not as good as with the sized between. The best result is with 50 where the Accuracy does not jump as much as with 20, 30, or 40. The average Loss is quite similar with all batch sizes. In the right Diagram in picture \ref{fig:parameter_study_batch} the average loss for the different batch sizes are shown. 
 					
 					\begin{figure} [H]
 						\centering
@@ -242,7 +242,7 @@
 		
 		\subsection{autoML}
 			
-			\noindent AutoML is a Framework to automate tasks in machine learning. The goal is to make it simpler for the user to find the right model and to train it. The training of machine learning models needs a lot of manual work from a programmer, like hyper parameter, feature and the model selection. AutoML tries to lower the manual work by automatising this process. This has the potential to lower the starting barrier for new programmers. It will also automate the process from section \ref{paramStudy}. 
+			\noindent AutoML is a framework to automate tasks in machine learning. The goal is to make it simpler for the user to find the right model and to train it. The training of machine learning models needs a lot of manual work from a programmer, like hyper parameter, feature and the model selection. AutoML tries to lower the manual work by automatising this process. This has the potential to lower the starting barrier for new programmers. It will also automate the process from section \ref{paramStudy}. 
 			
 			AutoML works in four phases. In the first one the data is preprocessed. It looks for highly correlational Data points and eliminates them and identifies variables with low predicting power to improve the dataset. After this Phase, autoML extracts Features and identifies the features with high predictive power. After these preparing stages the model gets tuned. In this Phase autoML identifies good hyperparameters and selects them. After finding a model and tuning its parameters, it will train it and evaluate the best models. At the end it will print a table like in picture \ref{fig:autoML_Table}.
 			
@@ -274,7 +274,7 @@
 		
 		\noindent This Dockerfile will start on a Ubuntu foundation, install GitHub and AutoPyTorch and all the dependencies. After that the GitHub repository of this Project will be cloned for further development inside of the container. 
 		
-		\noindent In the first 10 lines of the Dockerfile the base image is set to ubuntu:latest and some Arguments are defined. These Arguments are set when starting the container by the compose file or with the \textit{docker run} command. they will be important later in the file. 
+		\noindent In the first 10 lines of the Dockerfile the base image is set to ubuntu:latest and some arguments are defined. These arguments are set when starting the container by the compose file or with the \textit{docker run} command. they will be important later in the file. 
 		
 		%TODO: beautify the code or leave it
 		
@@ -304,9 +304,9 @@
 		
 		Docker provides a possibility to create containers with all the parameters defined in a \textit{.yaml} file. Docker Compose has some extra benefits as well but I will mainly use it as a file where I can save my parameters. 
 		
-		\noindent This Docker Compose file builds a Container from the Folder it is in. It will create an Image named \textit{ubuntu\_python\_env} and an Container from this Image with the same. It also uses the \textit{tty} parameter to make sure that the container does not terminate after an instant so a Visual Studio Code can be attached. 
+		\noindent This Docker Compose file builds a Container from the folder it is in. It will create an Image named \textit{ubuntu\_python\_env} and an Container from this Image with the same. It also uses the \textit{tty} parameter to make sure that the container does not terminate after an instant so a Visual Studio Code can be attached. 
 		
-		\noindent The Arguments given are used in the Dockerfile. 
+		\noindent The arguments given are used in the Dockerfile. 
 		
 		\begin{itemize}
 			\item gh\_token:  Authenticator token from GitHub. 
